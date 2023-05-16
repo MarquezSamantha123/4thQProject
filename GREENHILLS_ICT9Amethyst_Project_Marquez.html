@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Length Converter</title>
+	<style>
+		h2 {
+			font-family: Calibri;
+			font-size: 40px;
+		}
+		h4 {
+			font-family: Calibri;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body bgcolor="pink">
+	<center><h2>Length Converter</h2></center>
+	<center><h4>1 millimeter = 0.1 centimeter(divide length value by 10)</h4></center>
+	<center><h4>1 millimeter = 0.001 meter(divide length value by 1000)</h4></center>
+	<center><h4>1 millimeter = 1 x 10^-6 kilometer(divide length value by 1e+6)</h4></center>
+	<center><input type="text" id="id1" placeholder="Meter"></center><br><br>
+	<center><input type="submit" value="Convert" onclick="myFunctionName()"></center><br><br>
+	<p id="id2"></p>
+	<center><input type="text" id="id3" placeholder="Centimeter"></center><br><br>
+	<center><input type="submit" value="Convert" onclick="myFunctionName()"></center><br><br>
+	<p id="id4"></p>
+	<center><input type="text" id="id5" placeholder="Kilometer"></center><br><br>
+	<center><input type="submit" value="Convert" onclick="myFunctionName()"></center><br><br>
+	<p id="id6"></p>
+	<script>
+		function myFunctionName() {
+			var num2 = document.getElementById('id3').value;
+			var converted = num2 / 10;
+			document.getElementById('id4').innerHTML = converted + "centimeter(s)"
+			var num1 = document.getElementById('id1').value;
+			var converted = num1 / 1000;
+			document.getElementById('id2').innerHTML = converted + "meter(s)"
+			var Num1 = document.getElementById('id5').value;
+			var converted = Num1 / 1e+6;
+			document.getElementById('id6').innerHTML = converted + "kilometer(s)"
+		}
+	</script>
+</body>
+</html>
